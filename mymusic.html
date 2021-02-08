@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMusic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="navbar">
+           <img src="MyMusic/1.png" class="logo" alt="">
+           <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">Music</a> </li>
+            <li> <a href="#">Connect</a> </li>
+               
+
+
+           </ul>
+       </div>
+       <div class="content">
+           <div class="left-col">
+               <h1>Music <br> Is <br>Life</h1>
+
+
+           </div>
+           <div class="right-col">
+               <p>Click Here To Play</p>
+               <img src="circle-cropped.png" alt="" id="icon">
+
+
+           </div>
+       </div>
+    </div>
+    <audio src="06. Kahin To Hogi Ho.mp3" id="mySong">
+        
+    </audio>
+    <script>
+        var mySong=document.getElementById("mySong");
+        var icon= document.getElementById("icon");
+        icon.onclick=function(){
+            if(mySong.paused)
+            {
+                mySong.play();
+                icon.src="circle.png";
+                mySong.stop();
+            }
+            else{
+                mySong.pause();
+                icon.src="circle-cropped.png";
+                mySong.stop();
+                
+            }
+            
+            
+            
+            
+            
+        }
+
+
+    </script>
+</body>
+</html>
